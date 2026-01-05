@@ -1,10 +1,5 @@
 [
     {
-        "name": "api_base_url",
-        "value": "http://127.0.0.1:8000",
-        "slotSetting": false
-    },
-    {
         "name": "gunicorn_timeout",
         "value": "120",
         "slotSetting": false
