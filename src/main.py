@@ -14,6 +14,8 @@ class EchoResponse(BaseModel):
     message: str
     random_number: int
 
+app = FastAPI()
+
 @app.get("/health")
 async def health_check():
     """Health check endpoint"""
