@@ -95,9 +95,12 @@
         // Load configuration on page load
         async function loadConfig() {
             try {
-                const response = await fetch('../config/config.json');
-                const config = await response.json();
+                const response = await fetch('/config/config.json');
+                const configData = await response.json();
+                // Handle both array and object formats
+                const config = Array.isArray(configData) ? configData[0] : configData;
                 API_BASE_URL = config.api_base_url;
+                console.log('Loaded API_BASE_URL from config:', API_BASE_URL);
             } catch (error) {
                 console.warn('Could not load config, using default URL:', error);
             }
