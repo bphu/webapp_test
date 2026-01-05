@@ -1,3 +1,22 @@
-{
-  "api_base_url": "http://127.0.0.1:8000"
-}
+
+
+[
+    {
+        "api_base_url": "http://127.0.0.1:8000"
+    },
+    {
+        "name": "gunicorn_timeout",
+        "value": "120",
+        "slotSetting": false
+    },
+    {
+        "name": "num_workers",
+        "value": "8",
+        "slotSetting": false
+    },
+    {
+        "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
+        "value": "true",
+        "slotSetting": false
+    }
+]
